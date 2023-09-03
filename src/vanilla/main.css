@@ -353,7 +353,7 @@ h3 {
   border-radius: 50px;
   display: block;
   width: 100%;
-  /* background: #10a2bc96 url('img/loading-icon.gif') bottom/100% no-repeat; */
+  background: #10a2bc96 url('img/loading-icon.gif') bottom/100% no-repeat;
 }
 
 div.page:not(:first-child) {

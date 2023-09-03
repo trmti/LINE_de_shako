@@ -1,7 +1,7 @@
 body {
-  background-image: url("img/background_img.png");
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  background-image: url('img/background_img.png');
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
 }
 
 h1 {
@@ -139,7 +139,7 @@ h3 {
   width: 100%;
   height: 50%;
   background-color: #d0d0d0;
-  content: "";
+  content: '';
   filter: blur(4px);
 }
 
@@ -157,7 +157,7 @@ h3 {
 .box-015::before,
 .box-015::after {
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .box-015::before {
@@ -204,7 +204,7 @@ h3 {
 .radio-003 label::before,
 .radio-003 label:has(:checked)::after {
   border-radius: 50%;
-  content: "";
+  content: '';
 }
 
 .radio-003 label::before {
@@ -232,14 +232,14 @@ h3 {
   width: 80%;
   margin: 40px 3%;
 }
-.cp_iptxt input[type="text"] {
+.cp_iptxt input[type='text'] {
   font: 15px/24px sans-serif;
   box-sizing: border-box;
   width: 100%;
   letter-spacing: 1px;
   padding-left: 4em;
 }
-.cp_iptxt input[type="text"]:focus {
+.cp_iptxt input[type='text']:focus {
   outline: none;
 }
 .ef {
@@ -353,7 +353,7 @@ h3 {
   border-radius: 50px;
   display: block;
   width: 100%;
-  background: #10a2bc96 url(img/loading-icon.gif) bottom/100% no-repeat;
+  /* background: #10a2bc96 url('img/loading-icon.gif') bottom/100% no-repeat; */
 }
 
 div.page:not(:first-child) {

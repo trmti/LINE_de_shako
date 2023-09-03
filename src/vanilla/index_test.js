@@ -1,4 +1,11 @@
 window.onload = () => {
+  const cat_voices = [
+    new Audio('img/cat_sweet_voice1.mp3'),
+    new Audio('img/cat1b.mp3'),
+    new Audio('img/cat3a.mp3'),
+    new Audio('img/cat3c.mp3'),
+  ];
+
   const topPageButton = document.querySelector('#start_button');
   const sections = document.getElementsByClassName('page');
   const BottomText = document.querySelector('#bottom p');
@@ -22,6 +29,8 @@ window.onload = () => {
     car_width,
     car_height,
     address,
+    storage_address_before,
+    is_new,
     storage_address,
     police_station,
     residence_address,
@@ -85,11 +94,20 @@ window.onload = () => {
   next.addEventListener('click', () => {
     if (current == 1) back.disabled = false;
     if (current != questionNum) {
+      cat_voices[Math.floor(Math.random() * cat_voices.length)].play();
       sections[current].classList.add('disable');
+
+      address = document.getElementById('owner_address').value;
+      storage_address = document.getElementById('parking_address');
+      residence_address = document.getElementById('official_address');
+      if (current == 9 && !storage_address.value && !residence_address.value) {
+        storage_address.value = address;
+        residence_address.value = address;
+      }
       is_normal = document.getElementById('normal_size').checked;
       // current = questionNum;
       current++;
-      if (is_normal && current == 3) current++;
+      if (is_normal && current == 3) current += 2;
       sections[current].classList.remove('disable');
       BottomText.textContent = `Step ${current}/${questionNum}`;
       if (current == questionNum)
@@ -110,6 +128,9 @@ window.onload = () => {
       car_width = document.getElementById('width').value;
       car_height = document.getElementById('height').value;
       address = document.getElementById('owner_address').value;
+      storage_address_before =
+        document.getElementById('previous_address').value;
+      is_new = document.getElementById('reg_new').checked;
       storage_address = document.getElementById('parking_address').value;
       police_station = document.getElementById('police_station').value;
       residence_address = document.getElementById('official_address').value;
@@ -128,6 +149,10 @@ window.onload = () => {
       contact_phone = document.getElementById('submissioners_phone').value;
 
       addElement(contents, 'お車の種類: ' + (is_normal ? '普通車' : '小型車'));
+      if (!is_normal) {
+        addElement(contents, '前の保管場所の住所: ' + storage_address_before);
+        addElement(contents, '新規登録: ' + (is_new ? 'はい' : 'いいえ'));
+      }
       addElement(
         contents,
         '駐車場の所有者: ' +
@@ -173,7 +198,7 @@ window.onload = () => {
       document.querySelector('#next_btn button').textContent = '次へ';
     }
     current--;
-    if (is_normal && current == 3) current--;
+    if (is_normal && current == 4) current -= 2;
     if (current == 1) back.disabled = true;
     sections[current].classList.remove('disable');
     BottomText.textContent = `Step ${current}/${questionNum}`;

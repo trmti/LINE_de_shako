@@ -46,6 +46,7 @@ window.onload = () => {
   };
 
   // テスト用
+  document.getElementById('previous_address').value = '東京都港区六本木1-1-1';
   document.getElementById('manufacturer').value = 'BMW';
   document.getElementById('car_type_number').value = 'XABA-MF165';
   document.getElementById('identification_number').value = 'WMWMF32070TV47471';
@@ -85,8 +86,10 @@ window.onload = () => {
     if (current == 1) back.disabled = false;
     if (current != questionNum) {
       sections[current].classList.add('disable');
+      is_normal = document.getElementById('normal_size').checked;
       // current = questionNum;
       current++;
+      if (is_normal && current == 3) current++;
       sections[current].classList.remove('disable');
       BottomText.textContent = `Step ${current}/${questionNum}`;
       if (current == questionNum)
@@ -170,6 +173,7 @@ window.onload = () => {
       document.querySelector('#next_btn button').textContent = '次へ';
     }
     current--;
+    if (is_normal && current == 3) current--;
     if (current == 1) back.disabled = true;
     sections[current].classList.remove('disable');
     BottomText.textContent = `Step ${current}/${questionNum}`;

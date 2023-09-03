@@ -6,11 +6,12 @@ body {
 
 h1 {
   text-align: center;
-  color: #2bb300b0;
   background-color: white;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 0;
+  font-size: 24px;
+  color: #333;
 }
 
 h2 {
@@ -23,11 +24,6 @@ h3 {
   margin-top: 0;
   background-color: #2bb300b0;
   color: white;
-}
-
-#start_button {
-  left: auto;
-  right: auto;
 }
 
 #screen {
@@ -330,3 +326,97 @@ h3 {
 #social_apeal {
   background-color: white;
 }
+
+/* デフォルトのCSSアニメーションの停止 */
+/* @keyframes progress {
+    0% {width: 0}
+    100% {width: 100%}
+} */
+
+/* 垂直方向のアニメーション */
+@keyframes progress {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.progBar .bar {
+  width: 100%;
+  height: 0;
+}
+
+.progBar .bar {
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  background: #10a2bc96 url(img/loading-icon.gif) bottom/100% no-repeat;
+}
+
+div.page:not(:first-child) {
+  margin-top: 5em;
+}
+
+h2.heading-015 {
+  margin-bottom: 0.2em !important;
+}
+
+.notification-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.notification-wrap .box-design10 {
+  margin: 0;
+}
+
+.progBar {
+  width: 8%;
+  height: 100%;
+  display: block;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+.box-design10 {
+  margin-top: 0;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 90%;
+  transform: translateX(12%);
+  transform-origin: right;
+}
+
+/*グラデでロードを表現するパターン*/
+/* .progBar{
+  display:none !important;
+}
+.box-design10{
+  width:100%;
+  transform:unset;
+  animation:loading-waterfall 40s linear;
+  background-image: linear-gradient(180deg,#63d9ed96 50%,transparent 50%);
+  background-size: 200% 200%;
+}
+
+@keyframes loading-waterfall{
+  0%{
+      background-position-y:100%;
+  }
+  100%{
+      background-position-y:0%;
+  }
+} */

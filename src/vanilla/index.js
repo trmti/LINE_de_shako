@@ -75,28 +75,28 @@ window.onload = () => {
   const questionNum = sections.length - 2;
   let current = 1;
 
-  // テスト用
-  document.getElementById('previous_address').value = '東京都港区六本木1-1-1';
-  document.getElementById('manufacturer').value = 'BMW';
-  document.getElementById('car_type_number').value = 'XABA-MF165';
-  document.getElementById('identification_number').value = 'WMWMF32070TV47471';
-  document.getElementById('length').value = '111';
-  document.getElementById('width').value = '222';
-  document.getElementById('height').value = '333';
-  document.getElementById('owner_address').value = '東京都港区六本木1-1-1';
-  document.getElementById('parking_address').value = '東京都港区六本木1-1-1';
-  document.getElementById('police_station').value = '港';
-  document.getElementById('official_address').value = '東京都港区六本木1-1-1';
-  document.getElementById('familyname_kanji').value = '山田';
-  document.getElementById('firstname_kanji').value = '太郎';
-  document.getElementById('familyname_kana').value = 'ヤマダ';
-  document.getElementById('firstname_kana').value = 'タロウ';
-  document.getElementById('phone').value = '090-1234-5678';
-  document.getElementById('current_car_number').value = '静岡５３０れ1234';
-  document.getElementById('ex_car_number').value = '静岡５３０れ1234';
-  document.getElementById('ex_identification_number').value = 'AE-E12345678';
-  document.getElementById('submissioners_name').value = '山田太郎';
-  document.getElementById('submissioners_phone').value = '090-1234-5678';
+  // // テスト用
+  // document.getElementById('previous_address').value = '東京都港区六本木1-1-1';
+  // document.getElementById('manufacturer').value = 'BMW';
+  // document.getElementById('car_type_number').value = 'XABA-MF165';
+  // document.getElementById('identification_number').value = 'WMWMF32070TV47471';
+  // document.getElementById('length').value = '111';
+  // document.getElementById('width').value = '222';
+  // document.getElementById('height').value = '333';
+  // document.getElementById('owner_address').value = '東京都港区六本木1-1-1';
+  // document.getElementById('parking_address').value = '東京都港区六本木1-1-1';
+  // document.getElementById('police_station').value = '港';
+  // document.getElementById('official_address').value = '東京都港区六本木1-1-1';
+  // document.getElementById('familyname_kanji').value = '山田';
+  // document.getElementById('firstname_kanji').value = '太郎';
+  // document.getElementById('familyname_kana').value = 'ヤマダ';
+  // document.getElementById('firstname_kana').value = 'タロウ';
+  // document.getElementById('phone').value = '090-1234-5678';
+  // document.getElementById('current_car_number').value = '静岡５３０れ1234';
+  // document.getElementById('ex_car_number').value = '静岡５３０れ1234';
+  // document.getElementById('ex_identification_number').value = 'AE-E12345678';
+  // document.getElementById('submissioners_name').value = '山田太郎';
+  // document.getElementById('submissioners_phone').value = '090-1234-5678';
 
   topPageButton.addEventListener('click', () => {
     bottom.style.display = 'flex';

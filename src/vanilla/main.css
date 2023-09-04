@@ -380,11 +380,11 @@ h2.heading-015 {
 
 .progBar {
   width: 8%;
-  height: 100%;
+  height: calc(80px + 82px + 24px + 60px + 100px);
   display: block;
   border-radius: 50px;
   position: absolute;
-  top: 0;
+  top: calc(80px + 82px + 24px + 60px);
   bottom: 0;
   box-sizing: border-box;
 }
